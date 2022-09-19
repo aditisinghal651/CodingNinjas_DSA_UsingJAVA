@@ -1,4 +1,4 @@
-Coding Ninjas Assignment Solutions
+#Coding Ninjas Assignment Solutions
 
 Course 1 - Introduction to JAVA
 
