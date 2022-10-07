@@ -12,6 +12,12 @@ public class InterestingAlpha {
     }
 
     private static void interestingAlphabets(int n) {
-
+        for(int i = n; i >= 1; i--){
+            int startingChar = 'A' + i - 1;
+            for(int j = i; j <= n; j++){
+                System.out.print((char)startingChar++);
+            }
+            System.out.println();
+        }
     }
 }
