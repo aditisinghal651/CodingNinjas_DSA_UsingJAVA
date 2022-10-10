@@ -2,10 +2,19 @@ package IntroductionToJava.Arrays;
 
 import java.util.Scanner;
 
-public class ArraySum {
+public class LinearSearch {
 
-    public static void main(String[] args) {
-        arraySum(arrayInput());
+    public static void main(String[] args){
+        System.out.println(linear(arrayInput(), element()));
+    }
+
+    private static int linear(int[] arr, int elem) {
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] == elem){
+                return i;
+            }
+        }
+        return -1;
     }
 
     public static int[] arrayInput() {
@@ -26,15 +35,8 @@ public class ArraySum {
         return arr;
     }
 
-    private static void arraySum(int[] arr) {
-        int sum = 0;
-//        for(int i = 0; i < arr.length; i++){
-//            sum = sum + arr[i];
-//        }
-        // enhanced for loop
-        for(int number : arr){
-            sum += number;
-        }
-        System.out.println(sum);
+    public static int element(){
+        Scanner sc = new Scanner(System.in);
+        return sc.nextInt();
     }
 }
