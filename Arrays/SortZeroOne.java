@@ -27,11 +27,21 @@ public class SortZeroOne {
 
         //Method - 2 : When only 1 scan of the arrays is allowed
         int i = 0;
-        int j = arr.length;
+        int j = arr.length - 1;
 
         while(i < j){
-
-
+            while(arr[i] == 0 && i < j){
+                i++;
+            }
+            while(arr[j] == 1 && j > i){
+                j--;
+            }
+            if(i < j){
+                arr[i] = 0;
+                arr[j] = 1;
+                i++;
+                j--;
+            }
         }
         return arr;
     }
